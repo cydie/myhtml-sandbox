@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 25px auto;
+            font-size: 18px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-transform: uppercase;
+        }
+        td {
+            color: #555;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        tr td:nth-child(2) {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        tr td:nth-child(3) {
+            color: #5bc0de;
+            font-weight: bold;
+        }
+        /* Adding a hover effect for cells in stock */
+        tr td:nth-child(3):hover {
+            color: #28a745;
+            font-size: 1.1em;
+            transition: color 0.3s, font-size 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Product Name</th>
+            <th>Price (PHP)</th>
+            <th>Availability</th>
+        </tr>
+        <tr>
+            <td>Smartphone</td>
+            <td>₱35,000</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td>Laptop</td>
+            <td>₱50,000</td>
+            <td>Out of Stock</td>
+        </tr>
+        <tr>
+            <td>Headphones</td>
+            <td>₱10,000</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td>Smartwatch</td>
+            <td>₱15,000</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td>Tablet</td>
+            <td>₱25,000</td>
+            <td>Out of Stock</td>
+        </tr>
+    </table>
+</body>
+</html>
