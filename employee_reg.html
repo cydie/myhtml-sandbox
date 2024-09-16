@@ -66,31 +66,38 @@
         button[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Employee Registration</h1>
-        <form action="#" method="post" id="registration-form">
+        <form action="" method="get">
             <div class="form-group">
                 <label for="last_name">Last Name:</label>
-                <input type="text" id="last_name" required>
+                <input type="text" id="last_name" name="last_name" required>
             </div>
             <div class="form-group">
                 <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" required>
+                <input type="text" id="first_name" name="first_name" required>
             </div>
             <div class="form-group">
                 <label for="middle_name">Middle Name:</label>
-                <input type="text" id="middle_name">
+                <input type="text" id="middle_name" name="middle_name">
             </div>
             <div class="form-group">
                 <label for="birthdate">Birthdate:</label>
-                <input type="date" id="birthdate" required>
+                <input type="date" id="birthdate" name="birthdate" required>
             </div>
             <div class="form-group">
                 <label for="department">Department:</label>
-                <select id="department" required>
+                <select id="department" name="department" required>
                     <option value="hr">HR</option>
                     <option value="finance">Finance</option>
                     <option value="it">IT</option>
@@ -99,10 +106,20 @@
             </div>
             <div class="form-group">
                 <label for="office">Office:</label>
-                <input type="text" id="office" required>
+                <input type="text" id="office" name="office" required>
             </div>
             <button type="submit">Submit</button>
         </form>
+
+        <div id="output" class="output">
+            <h2>Submitted Information</h2>
+            <p><strong>Last Name:</strong> <span id="output_last_name"><?php echo htmlspecialchars($_GET['last_name'] ?? ''); ?></span></p>
+            <p><strong>First Name:</strong> <span id="output_first_name"><?php echo htmlspecialchars($_GET['first_name'] ?? ''); ?></span></p>
+            <p><strong>Middle Name:</strong> <span id="output_middle_name"><?php echo htmlspecialchars($_GET['middle_name'] ?? ''); ?></span></p>
+            <p><strong>Birthdate:</strong> <span id="output_birthdate"><?php echo htmlspecialchars($_GET['birthdate'] ?? ''); ?></span></p>
+            <p><strong>Department:</strong> <span id="output_department"><?php echo htmlspecialchars($_GET['department'] ?? ''); ?></span></p>
+            <p><strong>Office:</strong> <span id="output_office"><?php echo htmlspecialchars($_GET['office'] ?? ''); ?></span></p>
+        </div>
     </div>
 </body>
 </html>
